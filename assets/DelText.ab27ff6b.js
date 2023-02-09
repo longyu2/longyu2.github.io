@@ -1,0 +1,1 @@
+import{_ as t,o as s,c as o,e as _}from"./index.c646398c.js";const c={name:"del-text"};const n={class:"del-text",title:"\u4F60\u77E5\u9053\u7684\u592A\u591A\u4E86\u2026\u2026"};function a(e,u,r,l,d,p){return s(),o("span",n,[_(e.$slots,"default",{},void 0,!0)])}const x=t(c,[["render",a],["__scopeId","data-v-50cb4e78"]]);export{x as D};
