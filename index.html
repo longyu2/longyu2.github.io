@@ -92,7 +92,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/19/firstarticle/" data-id="clebnn4ab00010w63gm1hbmm3" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/02/19/firstarticle/" data-id="clebnptyb00017w63g4sk2v4i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -141,7 +141,160 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/19/hello-world/" data-id="clebnn4af00030w635802dr7e" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/02/19/hello-world/" data-id="clebo8h230001yo635ko44qvb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-编程笔记/三层架构" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" class="article-date">
+  <time datetime="2023-02-17T22:49:00.000Z" itemprop="datePublished">2023-02-18</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/">在线笔记的开发与三层架构</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="起源"><a href="#起源" class="headerlink" title="起源"></a>起源</h3><hr>
+<p>再次在在线笔记的架构选择中使用了三层架构，之前还是在三年多前学习ASP.NET的时候使用过，后来并未怎么写过代码，于是已经忘却。</p>
+<h3 id="新的发现"><a href="#新的发现" class="headerlink" title="新的发现"></a>新的发现</h3><hr>
+<p>刚开始，我的在线笔记没有分层，所有的代码全部写在一个js文件中，刚开始，只有几个接口的时候没有什么感觉，到了后来，接口数量和业务逻辑越来越多，我才明白了分层的重要性。<br>我也明白了代码需要高内聚低耦合的重要。</p>
+<h3 id="三层的优势"><a href="#三层的优势" class="headerlink" title="三层的优势"></a>三层的优势</h3><hr>
+<p>循环依赖。低层不会调用高层，高层调用次高层，次高调用底层。缺点就是循环调用，纵向耦合性太强，底层的依赖模块不能随意删除（或者说底层模块本来就不需要更换什么的）。但是搭起了三层架构以后，业务的拓展就非常的方便。由于是面向接口的前后端分离模式，增加功能只需要横向拓展，增加新功能就像搭积木一样，在架构大体搭建完成以后，功能的增加就像搭积木一样，功能模块与功能模块之间横向的耦合几乎为0！这使得后端的开发成为了像建房子一样轻松的事情，大体的框架已经具有，只需按照设定的规则编写功能模块，就能迅速进行功能开发。我甚至想到，可以写出一个可视化工具用来构建后端的开发，几乎是可行的，但是由于功能需要的数量可能没那么多，加上测试还是有一定的困难，暂时先放下，有机会再去试验。</p>
+<h3 id="Promise"><a href="#Promise" class="headerlink" title="Promise"></a>Promise</h3><hr>
+<p>我一度对于js的异步非常讨厌。它使我无法控制代码运行的顺序，经常会导致难以理解的bug出现，诚然这与我对js的了解脱不了干系，但也说明js的缺陷确实还是很大。但今天我终于学会了Promise的使用，作为对异步的修改，在我弄懂它之后，我感觉到了莫大的喜悦，它使我对于js的使用简单了许多。</p>
+<h3 id="可拓展性"><a href="#可拓展性" class="headerlink" title="可拓展性"></a>可拓展性</h3><hr>
+<p>在知乎的一篇文章中看见，程序员仿佛就像是在与未来的人交流，我深有同感。代码就像是写给未来能看到这代码的人的一封信一般，所以，需要尽可能的简单易懂，这种跨越时间，空间。与灵魂的交流，让人感觉到奇妙。</p>
+<p>代码也是需要留下可拓展的空间的。尽量去做到高内聚低耦合，这样就为未来的拓展留下了足够的空间，就算是重写，也能有迹可循。反之，如果写的太烂，循环的调用，各种强耦合，使得代码完全失去了扩展的余地，那就是十分害人了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" data-id="clebo4grt0000y06371gm6c0a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-编程笔记/移动端适配中的视口" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" class="article-date">
+  <time datetime="2023-01-10T20:34:00.000Z" itemprop="datePublished">2023-01-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/">移动端适配中的视口</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="2023-1-11-4-34"><a href="#2023-1-11-4-34" class="headerlink" title="2023/1/11        4:34"></a>2023/1/11        4:34</h5><h4 id="视口是什么"><a href="#视口是什么" class="headerlink" title="视口是什么"></a>视口是什么</h4><hr>
+<p>在桌面浏览器中，视口即指的是浏览器窗口。</p>
+<p>在移动端中，视口分为<strong>布局视口</strong>（layout viewport）和<strong>视觉视口</strong>（visual viewport），还有一个概念叫做<strong>理想视口</strong>（ideal viewport），它是布局视口的理想实现。理想视口的宽度等于视觉视口。</p>
+<h4 id="视觉视口"><a href="#视觉视口" class="headerlink" title="视觉视口"></a>视觉视口</h4><hr>
+<p>视觉视口即移动端屏幕的范围，即设备的可视区域。单位为CSS像素（见后文）。</p>
+<p>当我们在手机中缩放时，视觉视口的大小会被改变。</p>
+<h4 id="布局视口"><a href="#布局视口" class="headerlink" title="布局视口"></a>布局视口</h4><hr>
+<p>布局视口即我们在css代码中可获取的视口范围，我们编写的html页面都处于布局视口内。</p>
+<p>布局视口宽度若超过了视觉视口，则此时无法看到完整的网页，只能看到视觉视口内的部分。可通过左右滑动查看完整网页。</p>
+<h4 id="理想视口"><a href="#理想视口" class="headerlink" title="理想视口"></a>理想视口</h4><hr>
+<p>视觉视口的大小由屏幕的宽高决定，无法更改，但布局视口可以人为设置大小。为了能让网页的内容完全的显示出来，布局视口有一个最合适的值，这个值就是视觉视口的大小，也就是理想视口。或许可以这么说，“理想视口” 就是 “布局视口的理想值”。当布局视口宽度等于视觉视口，网页的内容就能完整的展现出来，无需缩放和滑动，所以，理想视口的值就是视觉视口。</p>
+<h4 id="物理像素"><a href="#物理像素" class="headerlink" title="物理像素"></a>物理像素</h4><hr>
+<p>显示器的最小物理单位。由红、蓝、绿三个led通过不同的亮度混合出各种色彩。</p>
+<h4 id="设备独立像素（device-independent-pixels）"><a href="#设备独立像素（device-independent-pixels）" class="headerlink" title="设备独立像素（device independent pixels）"></a>设备独立像素（device independent pixels）</h4><hr>
+<p>区别于<strong>物理像素</strong>，我们所说的 iphoneX的逻辑分辨率375 x 812指的就是设备独立像素。chrome检查元素模拟调试手机设备时显示如<code>375x667</code>和 <code>320x480</code>都是设备独立像素。</p>
+<p>一个设备独立像素里可能包含1个或者多个物理像素点。</p>
+<h4 id="css像素"><a href="#css像素" class="headerlink" title="css像素"></a>css像素</h4><hr>
+<p>在css中，使用的pixel 即css像素，当页面缩放比为1时，一个<strong>css像素</strong>对应一个<strong>设备独立像素</strong>，当页面缩放比不为1时，CSS像素和设备独立像素不再对应。比如当页面放大200%，则1个CSS像素等于4个设备独立像素。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" data-id="clebo4grw0001y063gtiv89yg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-编程笔记/编程笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2022-10-29T15:02:00.000Z" itemprop="datePublished">2022-10-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-今日之收获"><a href="#1-今日之收获" class="headerlink" title="1.今日之收获"></a>1.今日之收获</h3><p>今天的主要收获是，在帮助石磊的时候，重新审视了node在线聊天的许多漏洞，并加以完善，而且，在功能的拓展中，我充分的体会到了我当初使用状态码来进行接口消息的区分是多么正确的决定。使用三位数状态码来标记接口传输的json数据的功能，使我在扩展接口时非常顺利，没有任何的困难。这就是之前充分设计的好处，我终于体会到了代码需要良好的可扩展性，在写代码时，不仅仅要注重业务逻辑，更重要的是注重代码的健壮和可扩展性。之前忘了在哪看到，程序员老手写的代码只有2成是用在业务逻辑，剩下8成，是在保证代码的健壮，可复用性，安全。如今我终于深刻的体会到了，这是在书本上学不来的东西，只有在实际开发之中才能明白。</p>
+<h3 id="2-达到现实的原因"><a href="#2-达到现实的原因" class="headerlink" title="2.达到现实的原因"></a>2.达到现实的原因</h3><p>这一篇文章是我第一次真正认真使用markdown写作，当然，这是在我发现了markdown的众多优点之后做出的决定。我很久以前，就有写些东西的习惯，最早的保存下来的记录，是在15年，用纸质保存，后来，小米的便签伴随我到现在，其中，也用过word，到现在，越来越明晰数据流动的我，发觉还是markdown最适合我，word终究是有些笨重的，适合给普通人使用，而作为程序员的我，在数据的处理上，自然有自己的心得，现在的我，对于数据世界的本质越发明晰，越发清楚程序就是数据结构和算法的合集，只要知道了如何存储数据，如何操作数据，那么，就自然在程序的世界之中游刃有余了。</p>
+<p>促使我达到现在的境界的原因很大一部分来自于《编码》这本书，它使我对计算机的底层有了一个浅显直观的了解，并为未来打好了基础。然后，促使我达到真正如今的境界的还是nodejs的学习，在跟着黑马程序员的视频学习node的时候，知道了web服务器的本质就是监听80端口，并且读取本地的html文件，并且通过tcp连接发送给客户端，一切，都融会贯通。从前，不知道这一点的我，认为web服务器就是一个黑箱，后来，逐渐了解之后，才发现，原来，web服务器就是那么简单。读取文件，发送给客户端，就是这么的朴实无华。当然，要明白这一个概念，对于文件的操作，是必不可少的，而我对于文件操作的理解，还要来自于21年12月在做python爬虫的时候，在那个时候，我才理解了io，理解了编程语言不是运行在一个虚空的解释器之中，而是真真切切的运行在电脑之中。在理解文件io以前，我对于所有的编程语言的认知，都处于模糊的状态，知道明白了文件io，自然明白了后端语言是运行在操作系统之上的，而js，运行在浏览器环境之中，这就解答了我对于以前js的迷惑。在不明白这点时，我认为图形界面的应用程序很酷，明白了图形界面不过是调用了操作系统的一个接口之后，我就不再为图形界面感到震惊。</p>
+<h3 id="3-未来之企望"><a href="#3-未来之企望" class="headerlink" title="3.未来之企望"></a>3.未来之企望</h3><p>在未来，我将对数据越来越得心应手的处理，对计算机底层的理解越来越深入，对应用层的运用，也将越发熟练。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" data-id="clebo4gs00002y0633cckhagk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,6 +311,13 @@
           <aside id="sidebar">
   
     
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a></li></ul>
+    </div>
+  </div>
+
 
   
     
@@ -169,7 +329,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/02/">二月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/01/">一月 2023</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/10/">十月 2022</a></li></ul>
     </div>
   </div>
 
@@ -187,6 +347,18 @@
         
           <li>
             <a href="/2023/02/19/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/">在线笔记的开发与三层架构</a>
+          </li>
+        
+          <li>
+            <a href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/">移动端适配中的视口</a>
+          </li>
+        
+          <li>
+            <a href="/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
           </li>
         
       </ul>
