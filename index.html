@@ -64,6 +64,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="编程笔记-编程笔记/拆分组件与高内聚" class="article article-type-编程笔记" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" class="article-date">
+  <time datetime="2023-02-23T19:41:57.000Z" itemprop="datePublished">2023-02-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/">拆分组件与高内聚</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一千五百行的组件"><a href="#一千五百行的组件" class="headerlink" title="一千五百行的组件"></a>一千五百行的组件</h3><hr>
+<p>在很长的一段时间内，我仍然在SPA开发时没有去拆分组件，而是将所有的逻辑代码写在了同一个组件之中。因为这些UI和代码没有复用的需要，写在一个组件中还省去了组件通信的麻烦。所有的变量都近乎是全局变量，写起来不要太简单。但很快，我就吃到了苦果。变量和函数越来越多，命名越来越长，超过一千五百行的组件代码，让我在来回的滚动，即使是一直用Ctrl+F，查找代码块的位置都花了不少时间。</p>
+<h3 id="拆分组件的好处与困难"><a href="#拆分组件的好处与困难" class="headerlink" title="拆分组件的好处与困难"></a>拆分组件的好处与困难</h3><hr>
+<p>于是我终于决定对其拆分。想了一下拆分有哪些好处:</p>
+<ul>
+<li>代码高内聚低耦合，模块化更明显，每个组件只需做好分类之事，debug更快。</li>
+<li>单个文件代码的行数大大减少，省去了很多在代码块之间定位，查找的麻烦。</li>
+<li>从次以后搭建起模块框架，后续的开发能轻松不少。</li>
+</ul>
+<p>那么困难呢？也有不少：</p>
+<ul>
+<li>组件与组件之间额外通信的开销</li>
+<li>由于从前的代码都是使用的选项式API，更换成组合式API需要大量工作。</li>
+<li>以前的代码已经有很深的耦合，解耦需要花很多时间精力。</li>
+<li>重构往往会引发屎山崩溃，产生不可预知的后果。</li>
+</ul>
+<h3 id="决定"><a href="#决定" class="headerlink" title="决定"></a>决定</h3><p>尽管困难重重，但我还是选择了重构代码，将组件慢慢进行拆分，代码进行重写，并重新进行测试，目前还只完成了一小部分，但为未来打下了更好的基础，使在线笔记这个项目能够更长远地生存下去。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" data-id="clej5pr2y00031063bxf947go" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-firstarticle" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2023/02/19/firstarticle/" class="article-date">
@@ -92,7 +145,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/19/firstarticle/" data-id="clebnptyb00017w63g4sk2v4i" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/02/19/firstarticle/" data-id="clej5pr2u00011063epjf0ca3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -141,7 +194,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/19/hello-world/" data-id="clebo8h230001yo635ko44qvb" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/02/19/hello-world/" data-id="clej5pr2p000010632ibxci8u" class="article-share-link">Share</a>
       
       
     </footer>
@@ -192,7 +245,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" data-id="clebo4grt0000y06371gm6c0a" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" data-id="clej5pr2x00021063597ucdw4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -250,7 +303,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" data-id="clebo4grw0001y063gtiv89yg" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" data-id="clej5pr31000510632xh707yd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -294,7 +347,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" data-id="clebo4gs00002y0633cckhagk" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" data-id="clej5pr3b000910634iu8abqj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -342,6 +395,10 @@
       <ul>
         
           <li>
+            <a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/">拆分组件与高内聚</a>
+          </li>
+        
+          <li>
             <a href="/2023/02/19/firstarticle/">firstarticle</a>
           </li>
         
@@ -355,10 +412,6 @@
         
           <li>
             <a href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/">移动端适配中的视口</a>
-          </li>
-        
-          <li>
-            <a href="/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/">编程笔记</a>
           </li>
         
       </ul>
