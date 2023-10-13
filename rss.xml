@@ -5,54 +5,8 @@
         <link>https://longyu2.github.io</link>
         <description>这里是龙驭的个人博客，分享一切有趣的事情</description>
         <language>zh-CN</language>
-        <pubDate>Fri, 13 Oct 2023 10:51:47 +0800</pubDate>
-        <lastBuildDate>Fri, 13 Oct 2023 10:51:47 +0800</lastBuildDate>
-        <item>
-            <guid isPermalink="true">https://longyu2.github.io/2023/10/13/hello-world/</guid>
-            <title>Hello World</title>
-            <link>https://longyu2.github.io/2023/10/13/hello-world/</link>
-            <pubDate>Fri, 13 Oct 2023 10:51:47 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;Welcome to &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvLw==&#34;&gt;Hexo&lt;/span&gt;! This is your very first post. Check &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv&#34;&gt;documentation&lt;/span&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=&#34;&gt;troubleshooting&lt;/span&gt; or you can ask me on &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==&#34;&gt;GitHub&lt;/span&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;quick-start&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#quick-start&#34;&gt;#&lt;/a&gt; Quick Start&lt;/h2&gt;
-&lt;h3 id=&#34;create-a-new-post&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#create-a-new-post&#34;&gt;#&lt;/a&gt; Create a new post&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo new &lt;span class=&#34;string&#34;&gt;&amp;quot;My New Post&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s&#34;&gt;Writing&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;run-server&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#run-server&#34;&gt;#&lt;/a&gt; Run server&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=&#34;&gt;Server&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;generate-static-files&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#generate-static-files&#34;&gt;#&lt;/a&gt; Generate static files&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s&#34;&gt;Generating&lt;/span&gt;&lt;/p&gt;
-&lt;h3 id=&#34;deploy-to-remote-sites&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#deploy-to-remote-sites&#34;&gt;#&lt;/a&gt; Deploy to remote sites&lt;/h3&gt;
-&lt;p&gt;&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;More info: &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s&#34;&gt;Deployment&lt;/span&gt;&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
-            <guid isPermalink="true">https://longyu2.github.io/2023/04/07/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/readme/</guid>
-            <title></title>
-            <link>https://longyu2.github.io/2023/04/07/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/readme/</link>
-            <pubDate>Fri, 07 Apr 2023 02:55:45 +0800</pubDate>
-            <description><![CDATA[ &lt;h3 id=&#34;前提&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前提&#34;&gt;#&lt;/a&gt; 前提&lt;/h3&gt;
-&lt;p&gt;本文为了简明地向你解释&lt;br /&gt;
-本文假设你已经有简单的 html 和 css 知识和一些网络的常识&lt;br /&gt;
-假设你已经知道一些简要的概念如 IP 地址等。&lt;br /&gt;
-这是一个最基本的模型：&lt;br /&gt;
-&lt;img data-src=&#34;./1.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-在这个模型中，用户首先向服务器发起一个请求，服务器再把 html 发送给用户，用户的浏览器再将 html 文档渲染成页面。&lt;/p&gt;
-&lt;p&gt;当网络上只有客户和服务器两台机器的时候，客户机可以直接给服务器发送请求，服务器也可以直接向客户机发送数据，但如果网络上，机器的数量躲起来之后，客户机如何找到自己需要的服务器呢？这时候就需要 IP 地址了。&lt;/p&gt;
-&lt;p&gt;IP 地址是一串 32 位的二进制数，常使用点分 2 进制写法，如 192.168.1.1，这就是一个 IP 地址。它就像互联网上机器的门牌号，根据这个门牌号就能找到对应的计算机。从而访问网站。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;./2.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
-当用户在浏览器地址栏输入  &lt;code&gt;http://192.168.1.1&lt;/code&gt; ，浏览器就会向这个 ip 地址发起请求，而当服务器接收到请求之后，就会将 html 页面发送给浏览器，这样，就完成了网站的访问。&lt;/p&gt;
-&lt;h4 id=&#34;域名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域名&#34;&gt;#&lt;/a&gt; 域名&lt;/h4&gt;
-&lt;p&gt;由于 IP 地址太长而不方便记忆，于是人们引入了域名。域名通常用字母加点组成。如 &lt;code&gt;baidu.com&lt;/code&gt;  就是一个域名。域名的作用是 IP 地址的助记符，就向你不知道你学校的具体门牌号，但你打出租车，只要告诉司机学校的名字，他也能把你送到目的地。这样，在访问网站时，大家就都只使用更短的域名，而不用输入一大串的 IP 地址了。&lt;/p&gt;
-&lt;p&gt;那么，域名是如何转化为 IP 地址的呢？这需要借助 DNS 解析，它的实现过程本文不再赘述，若感兴趣可自行 Google。你只需要知道 DNS 的作用就是把域名转化为 IP 地址就行。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;./3.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
-&lt;p&gt;如上图所示，浏览器只需要去询问 dns 服务器，即可知道域名对于的 IP 地址，而这个过程浏览器帮助我们完成了，输入域名就可以直接访问网站。&lt;/p&gt;
-&lt;h4 id=&#34;超链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#超链接&#34;&gt;#&lt;/a&gt; 超链接&lt;/h4&gt;
-&lt;p&gt;在网站中，有一些点击之后会跳转到其他网站的按钮，它们就是超链接。它们使互联网真正地互联了起来，你只要有一个浏览器，就可以在一个任意网站之间跳来跳去，换而言之，超链接把整个网络连接在了一起，这就是 world wide web , 万维网。&lt;/p&gt;
- ]]></description>
-        </item>
+        <pubDate>Thu, 06 Apr 2023 23:24:00 +0800</pubDate>
+        <lastBuildDate>Thu, 06 Apr 2023 23:24:00 +0800</lastBuildDate>
         <item>
             <guid isPermalink="true">https://longyu2.github.io/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/</guid>
             <title>网络流程</title>
