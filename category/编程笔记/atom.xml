@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://longyu2.github.io</id>
+    <title>何穷 • Posts by &#34;编程笔记&#34; category</title>
+    <link href="https://longyu2.github.io" />
+    <updated>2023-04-06T15:24:00.000Z</updated>
+    <entry>
+        <id>https://longyu2.github.io/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/</id>
+        <title>网络流程</title>
+        <link rel="alternate" href="https://longyu2.github.io/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/"/>
+        <content type="html">&lt;h3 id=&#34;前提&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前提&#34;&gt;#&lt;/a&gt; 前提&lt;/h3&gt;
+&lt;p&gt;本文为了简明地向你解释&lt;br /&gt;
+本文假设你已经有简单的 html 和 css 知识和一些网络的常识&lt;br /&gt;
+假设你已经知道一些简要的概念如 IP 地址等。&lt;br /&gt;
+这是一个最基本的模型：&lt;br /&gt;
+2222&lt;br /&gt;
+&lt;img data-src=&#34;https://longyu2.github.io/images/1.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+ 在这个模型中，用户首先向服务器发起一个请求，服务器再把 html 发送给用户，用户的浏览器再将 html 文档渲染成页面。&lt;/p&gt;
+&lt;p&gt;当网络上只有客户和服务器两台机器的时候，客户机可以直接给服务器发送请求，服务器也可以直接向客户机发送数据，但如果网络上，机器的数量躲起来之后，客户机如何找到自己需要的服务器呢？这时候就需要 IP 地址了。&lt;/p&gt;
+&lt;p&gt;IP 地址是一串 32 位的二进制数，常使用点分 2 进制写法，如 192.168.1.1，这就是一个 IP 地址。它就像互联网上机器的门牌号，根据这个门牌号就能找到对应的计算机。从而访问网站。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://longyu2.github.io/images/2.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;
+当用户在浏览器地址栏输入  &lt;code&gt;http://192.168.1.1&lt;/code&gt; ，浏览器就会向这个 ip 地址发起请求，而当服务器接收到请求之后，就会将 html 页面发送给浏览器，这样，就完成了网站的访问。&lt;/p&gt;
+&lt;h4 id=&#34;域名&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#域名&#34;&gt;#&lt;/a&gt; 域名&lt;/h4&gt;
+&lt;p&gt;由于 IP 地址太长而不方便记忆，于是人们引入了域名。域名通常用字母加点组成。如 &lt;code&gt;baidu.com&lt;/code&gt;  就是一个域名。域名的作用是 IP 地址的助记符，就向你不知道你学校的具体门牌号，但你打出租车，只要告诉司机学校的名字，他也能把你送到目的地。这样，在访问网站时，大家就都只使用更短的域名，而不用输入一大串的 IP 地址了。&lt;/p&gt;
+&lt;p&gt;那么，域名是如何转化为 IP 地址的呢？这需要借助 DNS 解析，它的实现过程本文不再赘述，若感兴趣可自行 Google。你只需要知道 DNS 的作用就是把域名转化为 IP 地址就行。&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://longyu2.github.io/images/3.jpg&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;如上图所示，浏览器只需要去询问 dns 服务器，即可知道域名对于的 IP 地址，而这个过程浏览器帮助我们完成了，输入域名就可以直接访问网站。&lt;/p&gt;
+&lt;h4 id=&#34;超链接&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#超链接&#34;&gt;#&lt;/a&gt; 超链接&lt;/h4&gt;
+&lt;p&gt;在网站中，有一些点击之后会跳转到其他网站的按钮，它们就是超链接。它们使互联网真正地互联了起来，你只要有一个浏览器，就可以在一个任意网站之间跳来跳去，换而言之，超链接把整个网络连接在了一起，这就是 world wide web , 万维网。&lt;/p&gt;
+</content>
+        <updated>2023-04-06T15:24:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://longyu2.github.io/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
+        <title>frp内网穿透</title>
+        <link rel="alternate" href="https://longyu2.github.io/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+        <content type="html">&lt;h3 id=&#34;内网穿透&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内网穿透&#34;&gt;#&lt;/a&gt; 内网穿透&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;众所周知，由于 NAT 技术，用户被分割成了一个个的局域网，开放的 web 已经不复存在。由于 IPv4 地址的短缺，加上 IPv6 全面普及的遥遥无期，内网穿透有了极大的必要。&lt;/p&gt;
+&lt;h3 id=&#34;frp&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#frp&#34;&gt;#&lt;/a&gt; frp&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;内网穿透技术有很多，我选择了比较主流的 frp。一般来说，内网穿透都需要一台具有公网 IP 的服务器，当然也有端到端的穿透，但是这种打洞技术需要在两个客户端之间都安装穿透软件，无法直接使用 Web，暂时不使用。以后需要在两个设备之间传输大文件时再使用这种。&lt;/p&gt;
+&lt;h3 id=&#34;使用frp-将本地网站映射到公网&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#使用frp-将本地网站映射到公网&#34;&gt;#&lt;/a&gt; 使用 frp 将本地网站映射到公网&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;操作步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;下载对应的 frp 包，并解压&lt;/li&gt;
+&lt;li&gt;将 frps 程序 和 frps.ini 配置文件放至服务器对应目录，将 frpc 程序 和 frpc.ini 配置文件放至服务器对应目录。&lt;/li&gt;
+&lt;li&gt;修改 frps.ini，设置与客户端通信的端口，以及暴露给外界的 http 端口，并启动 &lt;code&gt;./frps -c frps.ini命令&lt;/code&gt; 。&lt;br /&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[common]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;bind_port = 7000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;vhost_http_port = 8080&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;修改 frpc.ini，设置与服务器通信的端口和本地 web 服务器的端口，并启动 &lt;code&gt;./frpc -c frpc.ini命令&lt;/code&gt; 。&lt;br /&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;[common]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;server_addr = x.x.x.x&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;server_port = 7000&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[web]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;type = http&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;local_port = 80&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;custom_domains = www.yourdomain.com&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;[web2]&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;type = http&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;local_port = 8080&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;custom_domains = www.yourdomain2.com&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/li&gt;
+&lt;li&gt;使用浏览器访问设置的域名，则可访问到内网网站。&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <updated>2023-02-24T23:23:29.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://longyu2.github.io/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/</id>
+        <title>拆分组件与高内聚</title>
+        <link rel="alternate" href="https://longyu2.github.io/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/"/>
+        <content type="html">&lt;h3 id=&#34;一千五百行的组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一千五百行的组件&#34;&gt;#&lt;/a&gt; 一千五百行的组件&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;在很长的一段时间内，我仍然在 SPA 开发时没有去拆分组件，而是将所有的逻辑代码写在了同一个组件之中。因为这些 UI 和代码没有复用的需要，写在一个组件中还省去了组件通信的麻烦。所有的变量都近乎是全局变量，写起来不要太简单。但很快，我就吃到了苦果。变量和函数越来越多，命名越来越长，超过一千五百行的组件代码，让我在来回的滚动，即使是一直用 Ctrl+F，查找代码块的位置都花了不少时间。&lt;/p&gt;
+&lt;h3 id=&#34;拆分组件的好处与困难&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#拆分组件的好处与困难&#34;&gt;#&lt;/a&gt; 拆分组件的好处与困难&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;于是我终于决定对其拆分。想了一下拆分有哪些好处:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;代码高内聚低耦合，模块化更明显，每个组件只需做好分类之事，debug 更快。&lt;/li&gt;
+&lt;li&gt;单个文件代码的行数大大减少，省去了很多在代码块之间定位，查找的麻烦。&lt;/li&gt;
+&lt;li&gt;从次以后搭建起模块框架，后续的开发能轻松不少。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;那么困难呢？也有不少：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;组件与组件之间额外通信的开销&lt;/li&gt;
+&lt;li&gt;由于从前的代码都是使用的选项式 API，更换成组合式 API 需要大量工作。&lt;/li&gt;
+&lt;li&gt;以前的代码已经有很深的耦合，解耦需要花很多时间精力。&lt;/li&gt;
+&lt;li&gt;重构往往会引发屎山崩溃，产生不可预知的后果。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;决定&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#决定&#34;&gt;#&lt;/a&gt; 决定&lt;/h3&gt;
+&lt;p&gt;尽管困难重重，但我还是选择了重构代码，将组件慢慢进行拆分，代码进行重写，并重新进行测试，目前还只完成了一小部分，但为未来打下了更好的基础，使在线笔记这个项目能够更长远地生存下去。&lt;/p&gt;
+</content>
+        <updated>2023-02-23T19:41:57.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://longyu2.github.io/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/</id>
+        <title>在线笔记的开发与三层架构</title>
+        <link rel="alternate" href="https://longyu2.github.io/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/"/>
+        <content type="html">&lt;h3 id=&#34;起源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#起源&#34;&gt;#&lt;/a&gt; 起源&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;再次在在线笔记的架构选择中使用了三层架构，之前还是在三年多前学习 ASP.NET 的时候使用过，后来并未怎么写过代码，于是已经忘却。&lt;/p&gt;
+&lt;h3 id=&#34;新的发现&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#新的发现&#34;&gt;#&lt;/a&gt; 新的发现&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;刚开始，我的在线笔记没有分层，所有的代码全部写在一个 js 文件中，刚开始，只有几个接口的时候没有什么感觉，到了后来，接口数量和业务逻辑越来越多，我才明白了分层的重要性。&lt;br /&gt;
+我也明白了代码需要高内聚低耦合的重要。&lt;/p&gt;
+&lt;h3 id=&#34;三层的优势&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#三层的优势&#34;&gt;#&lt;/a&gt; 三层的优势&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;循环依赖。低层不会调用高层，高层调用次高层，次高调用底层。缺点就是循环调用，纵向耦合性太强，底层的依赖模块不能随意删除（或者说底层模块本来就不需要更换什么的）。但是搭起了三层架构以后，业务的拓展就非常的方便。由于是面向接口的前后端分离模式，增加功能只需要横向拓展，增加新功能就像搭积木一样，在架构大体搭建完成以后，功能的增加就像搭积木一样，功能模块与功能模块之间横向的耦合几乎为 0！这使得后端的开发成为了像建房子一样轻松的事情，大体的框架已经具有，只需按照设定的规则编写功能模块，就能迅速进行功能开发。我甚至想到，可以写出一个可视化工具用来构建后端的开发，几乎是可行的，但是由于功能需要的数量可能没那么多，加上测试还是有一定的困难，暂时先放下，有机会再去试验。&lt;/p&gt;
+&lt;h3 id=&#34;promise&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#promise&#34;&gt;#&lt;/a&gt; Promise&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;我一度对于 js 的异步非常讨厌。它使我无法控制代码运行的顺序，经常会导致难以理解的 bug 出现，诚然这与我对 js 的了解脱不了干系，但也说明 js 的缺陷确实还是很大。但今天我终于学会了 Promise 的使用，作为对异步的修改，在我弄懂它之后，我感觉到了莫大的喜悦，它使我对于 js 的使用简单了许多。&lt;/p&gt;
+&lt;h3 id=&#34;可拓展性&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#可拓展性&#34;&gt;#&lt;/a&gt; 可拓展性&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;在知乎的一篇文章中看见，程序员仿佛就像是在与未来的人交流，我深有同感。代码就像是写给未来能看到这代码的人的一封信一般，所以，需要尽可能的简单易懂，这种跨越时间，空间。与灵魂的交流，让人感觉到奇妙。&lt;/p&gt;
+&lt;p&gt;代码也是需要留下可拓展的空间的。尽量去做到高内聚低耦合，这样就为未来的拓展留下了足够的空间，就算是重写，也能有迹可循。反之，如果写的太烂，循环的调用，各种强耦合，使得代码完全失去了扩展的余地，那就是十分害人了。&lt;/p&gt;
+</content>
+        <updated>2023-02-17T22:49:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://longyu2.github.io/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/</id>
+        <title>移动端适配中的视口</title>
+        <link rel="alternate" href="https://longyu2.github.io/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/"/>
+        <content type="html">&lt;h5 id=&#34;2023111434&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2023111434&#34;&gt;#&lt;/a&gt; 2023/1/11		4:34&lt;/h5&gt;
+&lt;h4 id=&#34;视口是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#视口是什么&#34;&gt;#&lt;/a&gt; 视口是什么&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;在桌面浏览器中，视口即指的是浏览器窗口。&lt;/p&gt;
+&lt;p&gt;在移动端中，视口分为&lt;strong&gt;布局视口&lt;/strong&gt;（layout viewport）和&lt;strong&gt;视觉视口&lt;/strong&gt;（visual viewport），还有一个概念叫做&lt;strong&gt;理想视口&lt;/strong&gt;（ideal viewport），它是布局视口的理想实现。理想视口的宽度等于视觉视口。&lt;/p&gt;
+&lt;h4 id=&#34;视觉视口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#视觉视口&#34;&gt;#&lt;/a&gt; 视觉视口&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;视觉视口即移动端屏幕的范围，即设备的可视区域。单位为 CSS 像素（见后文）。&lt;/p&gt;
+&lt;p&gt;当我们在手机中缩放时，视觉视口的大小会被改变。&lt;/p&gt;
+&lt;h4 id=&#34;布局视口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#布局视口&#34;&gt;#&lt;/a&gt; 布局视口&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;布局视口即我们在 css 代码中可获取的视口范围，我们编写的 html 页面都处于布局视口内。&lt;/p&gt;
+&lt;p&gt;布局视口宽度若超过了视觉视口，则此时无法看到完整的网页，只能看到视觉视口内的部分。可通过左右滑动查看完整网页。&lt;/p&gt;
+&lt;h4 id=&#34;理想视口&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#理想视口&#34;&gt;#&lt;/a&gt; 理想视口&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;视觉视口的大小由屏幕的宽高决定，无法更改，但布局视口可以人为设置大小。为了能让网页的内容完全的显示出来，布局视口有一个最合适的值，这个值就是视觉视口的大小，也就是理想视口。或许可以这么说，“理想视口” 就是 “布局视口的理想值”。当布局视口宽度等于视觉视口，网页的内容就能完整的展现出来，无需缩放和滑动，所以，理想视口的值就是视觉视口。&lt;/p&gt;
+&lt;h4 id=&#34;物理像素&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#物理像素&#34;&gt;#&lt;/a&gt; 物理像素&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;显示器的最小物理单位。由红、蓝、绿三个 led 通过不同的亮度混合出各种色彩。&lt;/p&gt;
+&lt;h4 id=&#34;设备独立像素device-independent-pixels&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#设备独立像素device-independent-pixels&#34;&gt;#&lt;/a&gt; 设备独立像素（device independent pixels）&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;区别于&lt;strong&gt;物理像素&lt;/strong&gt;，我们所说的 iphoneX 的逻辑分辨率 375 x 812 指的就是设备独立像素。chrome 检查元素模拟调试手机设备时显示如 &lt;code&gt;375x667&lt;/code&gt;  和  &lt;code&gt;320x480&lt;/code&gt;  都是设备独立像素。&lt;/p&gt;
+&lt;p&gt;一个设备独立像素里可能包含 1 个或者多个物理像素点。&lt;/p&gt;
+&lt;h4 id=&#34;css像素&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#css像素&#34;&gt;#&lt;/a&gt; css 像素&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;在 css 中，使用的 pixel 即 css 像素，当页面缩放比为 1 时，一个&lt;strong&gt; css 像素&lt;/strong&gt;对应一个&lt;strong&gt;设备独立像素&lt;/strong&gt;，当页面缩放比不为 1 时，CSS 像素和设备独立像素不再对应。比如当页面放大 200%，则 1 个 CSS 像素等于 4 个设备独立像素。&lt;/p&gt;
+</content>
+        <updated>2023-01-10T20:34:00.000Z</updated>
+    </entry>
+    <entry>
+        <id>https://longyu2.github.io/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</id>
+        <title>编程笔记</title>
+        <link rel="alternate" href="https://longyu2.github.io/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+        <content type="html">&lt;h3 id=&#34;1今日之收获&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1今日之收获&#34;&gt;#&lt;/a&gt; 1. 今日之收获&lt;/h3&gt;
+&lt;p&gt;今天的主要收获是，在帮助石磊的时候，重新审视了 node 在线聊天的许多漏洞，并加以完善，而且，在功能的拓展中，我充分的体会到了我当初使用状态码来进行接口消息的区分是多么正确的决定。使用三位数状态码来标记接口传输的 json 数据的功能，使我在扩展接口时非常顺利，没有任何的困难。这就是之前充分设计的好处，我终于体会到了代码需要良好的可扩展性，在写代码时，不仅仅要注重业务逻辑，更重要的是注重代码的健壮和可扩展性。之前忘了在哪看到，程序员老手写的代码只有 2 成是用在业务逻辑，剩下 8 成，是在保证代码的健壮，可复用性，安全。如今我终于深刻的体会到了，这是在书本上学不来的东西，只有在实际开发之中才能明白。&lt;/p&gt;
+&lt;h3 id=&#34;2达到现实的原因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2达到现实的原因&#34;&gt;#&lt;/a&gt; 2. 达到现实的原因&lt;/h3&gt;
+&lt;p&gt;这一篇文章是我第一次真正认真使用 markdown 写作，当然，这是在我发现了 markdown 的众多优点之后做出的决定。我很久以前，就有写些东西的习惯，最早的保存下来的记录，是在 15 年，用纸质保存，后来，小米的便签伴随我到现在，其中，也用过 word，到现在，越来越明晰数据流动的我，发觉还是 markdown 最适合我，word 终究是有些笨重的，适合给普通人使用，而作为程序员的我，在数据的处理上，自然有自己的心得，现在的我，对于数据世界的本质越发明晰，越发清楚程序就是数据结构和算法的合集，只要知道了如何存储数据，如何操作数据，那么，就自然在程序的世界之中游刃有余了。&lt;/p&gt;
+&lt;p&gt;促使我达到现在的境界的原因很大一部分来自于《编码》这本书，它使我对计算机的底层有了一个浅显直观的了解，并为未来打好了基础。然后，促使我达到真正如今的境界的还是 nodejs 的学习，在跟着黑马程序员的视频学习 node 的时候，知道了 web 服务器的本质就是监听 80 端口，并且读取本地的 html 文件，并且通过 tcp 连接发送给客户端，一切，都融会贯通。从前，不知道这一点的我，认为 web 服务器就是一个黑箱，后来，逐渐了解之后，才发现，原来，web 服务器就是那么简单。读取文件，发送给客户端，就是这么的朴实无华。当然，要明白这一个概念，对于文件的操作，是必不可少的，而我对于文件操作的理解，还要来自于 21 年 12 月在做 python 爬虫的时候，在那个时候，我才理解了 io，理解了编程语言不是运行在一个虚空的解释器之中，而是真真切切的运行在电脑之中。在理解文件 io 以前，我对于所有的编程语言的认知，都处于模糊的状态，知道明白了文件 io，自然明白了后端语言是运行在操作系统之上的，而 js，运行在浏览器环境之中，这就解答了我对于以前 js 的迷惑。在不明白这点时，我认为图形界面的应用程序很酷，明白了图形界面不过是调用了操作系统的一个接口之后，我就不再为图形界面感到震惊。&lt;/p&gt;
+&lt;h3 id=&#34;3未来之企望&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#3未来之企望&#34;&gt;#&lt;/a&gt; 3. 未来之企望&lt;/h3&gt;
+&lt;p&gt;在未来，我将对数据越来越得心应手的处理，对计算机底层的理解越来越深入，对应用层的运用，也将越发熟练。&lt;/p&gt;
+</content>
+        <updated>2022-10-29T15:02:00.000Z</updated>
+    </entry>
+</feed>

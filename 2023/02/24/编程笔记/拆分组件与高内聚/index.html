@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="https://longyu2.github.io/2023/10/13/hello-world/">
+<link rel="canonical" href="https://longyu2.github.io/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/">
 
 
 
   <title>
-Hello World |
+拆分组件与高内聚 - 编程笔记 |
 Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,16 +58,16 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">Hello World
+  <h1 itemprop="name headline">拆分组件与高内聚
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2023-10-13 10:51:47">
+  <span class="item" title="创建时间：2023-02-24 03:41:57">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2023-10-13T10:51:47+08:00">2023-10-13</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-24T03:41:57+08:00">2023-02-24</time>
   </span>
 </div>
 
@@ -100,12 +100,12 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipetfk5zwj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeudstjqj20zk0m8k3r.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeu7txpzj20zk0m81kx.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicljitigmj20zk0m87fp.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicljgocqbj20zk0m8e81.jpg"></li>
-          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giclxxcb6rj20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipeu1usa7j20zk0m8b29.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicli9lfebj20zk0m84qp.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giciusoyjnj219g0u0x56.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1giph47e9vtj20zk0m8x6l.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gicmnywqgpj20zk0m8dwx.jpg"></li>
+          <li class="item" data-background-image="https://tva1.sinaimg.cn/large/6833939bly1gipex2cdtbj20zk0m8x6p.jpg"></li>
         </ul>
       </div>
     </header>
@@ -130,11 +130,13 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
     
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
-<span><a href="/">首页</a></span>
+<span><a href="/">首页</a></span><i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" itemprop="item" rel="index" title="分类于 编程笔记"><span itemprop="name">编程笔记</span></a>
+<meta itemprop="position" content="1" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="https://longyu2.github.io/2023/10/13/hello-world/">
+  <link itemprop="mainEntityOfPage" href="https://longyu2.github.io/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -149,26 +151,39 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>Welcome to <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvLw==">Hexo</span>! This is your very first post. Check <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mv">documentation</span> for more info. If you get any problems when using Hexo, you can find the answer in <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvdHJvdWJsZXNob290aW5nLmh0bWw=">troubleshooting</span> or you can ask me on <span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2hleG9qcy9oZXhvL2lzc3Vlcw==">GitHub</span>.</p>
-<h2 id="quick-start"><a class="anchor" href="#quick-start">#</a> Quick Start</h2>
-<h3 id="create-a-new-post"><a class="anchor" href="#create-a-new-post">#</a> Create a new post</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure></p>
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvd3JpdGluZy5odG1s">Writing</span></p>
-<h3 id="run-server"><a class="anchor" href="#run-server">#</a> Run server</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure></p>
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvc2VydmVyLmh0bWw=">Server</span></p>
-<h3 id="generate-static-files"><a class="anchor" href="#generate-static-files">#</a> Generate static files</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure></p>
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3MvZ2VuZXJhdGluZy5odG1s">Generating</span></p>
-<h3 id="deploy-to-remote-sites"><a class="anchor" href="#deploy-to-remote-sites">#</a> Deploy to remote sites</h3>
-<p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure></p>
-<p>More info: <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlvL2RvY3Mvb25lLWNvbW1hbmQtZGVwbG95bWVudC5odG1s">Deployment</span></p>
+    <h3 id="一千五百行的组件"><a class="anchor" href="#一千五百行的组件">#</a> 一千五百行的组件</h3>
+<hr />
+<p>在很长的一段时间内，我仍然在 SPA 开发时没有去拆分组件，而是将所有的逻辑代码写在了同一个组件之中。因为这些 UI 和代码没有复用的需要，写在一个组件中还省去了组件通信的麻烦。所有的变量都近乎是全局变量，写起来不要太简单。但很快，我就吃到了苦果。变量和函数越来越多，命名越来越长，超过一千五百行的组件代码，让我在来回的滚动，即使是一直用 Ctrl+F，查找代码块的位置都花了不少时间。</p>
+<h3 id="拆分组件的好处与困难"><a class="anchor" href="#拆分组件的好处与困难">#</a> 拆分组件的好处与困难</h3>
+<hr />
+<p>于是我终于决定对其拆分。想了一下拆分有哪些好处:</p>
+<ul>
+<li>代码高内聚低耦合，模块化更明显，每个组件只需做好分类之事，debug 更快。</li>
+<li>单个文件代码的行数大大减少，省去了很多在代码块之间定位，查找的麻烦。</li>
+<li>从次以后搭建起模块框架，后续的开发能轻松不少。</li>
+</ul>
+<p>那么困难呢？也有不少：</p>
+<ul>
+<li>组件与组件之间额外通信的开销</li>
+<li>由于从前的代码都是使用的选项式 API，更换成组合式 API 需要大量工作。</li>
+<li>以前的代码已经有很深的耦合，解耦需要花很多时间精力。</li>
+<li>重构往往会引发屎山崩溃，产生不可预知的后果。</li>
+</ul>
+<h3 id="决定"><a class="anchor" href="#决定">#</a> 决定</h3>
+<p>尽管困难重重，但我还是选择了重构代码，将组件慢慢进行拆分，代码进行重写，并重新进行测试，目前还只完成了一小部分，但为未来打下了更好的基础，使在线笔记这个项目能够更长远地生存下去。</p>
 
   </div>
 
    <footer>
 
     <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2023-02-25 07:53:20" itemprop="dateModified" datetime="2023-02-25T07:53:20+08:00">2023-02-25</time>
+  </span>
 </div>
 
       
@@ -203,7 +218,7 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="https://longyu2.github.io/2023/10/13/hello-world/" title="Hello World">https://longyu2.github.io/2023/10/13/hello-world/</a>
+    <a href="https://longyu2.github.io/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" title="拆分组件与高内聚">https://longyu2.github.io/2023/02/24/编程笔记/拆分组件与高内聚/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -222,14 +237,22 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
     <div class="item left">
       
 
-  <a href="/2023/04/07/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/readme/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1giclize41wj20zk0m87gk.jpg" title="未命名">
+  <a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipex2cdtbj20zk0m8x6p.jpg" title="在线笔记的开发与三层架构">
   <span class="type">上一篇</span>
-  <span class="category"><i class="ic i-flag"></i> </span>
-  <h3>未命名</h3>
+  <span class="category"><i class="ic i-flag"></i> 编程笔记</span>
+  <h3>在线笔记的开发与三层架构</h3>
   </a>
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;tva1.sinaimg.cn&#x2F;mw690&#x2F;6833939bly1gipet4bz0yj20zk0m8e81.jpg" title="frp内网穿透">
+  <span class="type">下一篇</span>
+  <span class="category"><i class="ic i-flag"></i> 编程笔记</span>
+  <h3>frp内网穿透</h3>
+  </a>
+
     </div>
 </div>
 
@@ -246,9 +269,12 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#quick-start"><span class="toc-number">1.</span> <span class="toc-text"> Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text"> Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#run-server"><span class="toc-number">1.2.</span> <span class="toc-text"> Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text"> Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text"> Deploy to remote sites</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E5%8D%83%E4%BA%94%E7%99%BE%E8%A1%8C%E7%9A%84%E7%BB%84%E4%BB%B6"><span class="toc-number">1.</span> <span class="toc-text"> 一千五百行的组件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E7%9A%84%E5%A5%BD%E5%A4%84%E4%B8%8E%E5%9B%B0%E9%9A%BE"><span class="toc-number">2.</span> <span class="toc-text"> 拆分组件的好处与困难</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%B3%E5%AE%9A"><span class="toc-number">3.</span> <span class="toc-text"> 决定</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
+        <ul>
+          <li><a href="/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" rel="bookmark" title="编程笔记">编程笔记</a></li><li><a href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" rel="bookmark" title="移动端适配中的视口">移动端适配中的视口</a></li><li><a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" rel="bookmark" title="在线笔记的开发与三层架构">在线笔记的开发与三层架构</a></li><li class="active"><a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" rel="bookmark" title="拆分组件与高内聚">拆分组件与高内聚</a></li><li><a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="bookmark" title="frp内网穿透">frp内网穿透</a></li><li><a href="/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/" rel="bookmark" title="网络流程">网络流程</a></li>
+        </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
         <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -292,10 +318,12 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -317,20 +345,29 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%93%B2%E5%AD%A6/" title="分类于 哲学">哲学</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2023/03/01/%E4%BD%95%E4%B8%BA%E4%BA%BA/" title="何为人">何为人</a></span>
+    <span><a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="frp内网穿透">frp内网穿透</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" title="拆分组件与高内聚">拆分组件与高内聚</a></span>
+    <span><a href="/2023/04/07/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/readme/" title="未命名">未命名</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%BF%83%E7%90%86/" title="分类于 心理">心理</a>
+</div>
+
+    <span><a href="/2023/02/27/%E5%AF%B9%E4%BA%8E%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%8F%8A%E5%A4%96%E7%95%8C%E7%9A%84%E6%80%9D%E8%80%83/" title="对于自身以及外界的思考">对于自身以及外界的思考</a></span>
   </li>
 
       
@@ -349,17 +386,37 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
 <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="frp内网穿透">frp内网穿透</a></span>
+    <span><a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" title="拆分组件与高内聚">拆分组件与高内聚</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%BF%83%E7%90%86/" title="分类于 心理">心理</a>
+<a href="/categories/%E5%93%B2%E5%AD%A6/" title="分类于 哲学">哲学</a>
 </div>
 
-    <span><a href="/2023/02/27/%E5%AF%B9%E4%BA%8E%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%8F%8A%E5%A4%96%E7%95%8C%E7%9A%84%E6%80%9D%E8%80%83/" title="对于自身以及外界的思考">对于自身以及外界的思考</a></span>
+    <span><a href="/2023/03/09/%E4%BA%BA%E4%B9%8B%E8%BF%BD%E6%B1%82/" title="人之追求">人之追求</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%93%B2%E5%AD%A6/" title="分类于 哲学">哲学</a>
+</div>
+
+    <span><a href="/2023/03/01/%E4%BD%95%E4%B8%BA%E4%BA%BA/" title="何为人">何为人</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
+</div>
+
+    <span><a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" title="在线笔记的开发与三层架构">在线笔记的开发与三层架构</a></span>
   </li>
 
       
@@ -379,36 +436,7 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
 <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="编程笔记">编程笔记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%93%B2%E5%AD%A6/" title="分类于 哲学">哲学</a>
-</div>
-
-    <span><a href="/2023/03/09/%E4%BA%BA%E4%B9%8B%E8%BF%BD%E6%B1%82/" title="人之追求">人之追求</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-</div>
-
-    <span><a href="/2023/04/07/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/readme/" title="未命名">未命名</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
-</div>
-
-    <span><a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" title="在线笔记的开发与三层架构">在线笔记的开发与三层架构</a></span>
+    <span><a href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" title="移动端适配中的视口">移动端适配中的视口</a></span>
   </li>
 
   </ul>
@@ -439,7 +467,7 @@ Yume Shoka = 何穷 = 世事无极，谁可穷之？</title>
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2023/10/13/hello-world/',
+    path: '2023/02/24/编程笔记/拆分组件与高内聚/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"
