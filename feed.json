@@ -5,6 +5,14 @@
     "home_page_url": "https://longyu2.github.io",
     "items": [
         {
+            "id": "https://longyu2.github.io/links/",
+            "url": "https://longyu2.github.io/links/",
+            "title": "友链",
+            "date_published": "2023-10-14T12:05:23.000Z",
+            "content_html": "<h1 id=\"\"><a class=\"anchor\" href=\"#\">#</a> </h1>\n<p><div class=\"links\"><div class=\"item\" title=\"shbwb\" style=\"--block-color:#e9546b;\"><span class=\"exturl image\" data-url=\"aHR0cHM6Ly92dWUubWlzYWthLWZhbnMuc3BhY2U=\" data-background-image=\"https://vue.misaka-fans.space/assets/%E7%82%AE%E5%A7%90%E5%90%83%E8%9B%8B%E7%B3%95.6c221c5c.webp\"></span>\n          <div class=\"info\">\n          <span class=\"exturl title\" data-url=\"aHR0cHM6Ly92dWUubWlzYWthLWZhbnMuc3BhY2U=\">爱我超电磁炮</span>\n          <p class=\"desc\">御坂美琴爱好者网站 & 超电磁炮</p>\n          </div></div></div></p>\n",
+            "tags": []
+        },
+        {
             "id": "https://longyu2.github.io/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/",
             "url": "https://longyu2.github.io/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/",
             "title": "网络流程",
