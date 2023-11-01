@@ -100,12 +100,12 @@ react入门语法 |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/20.webp"></li>
-          <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/9.webp"></li>
+          <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/11.webp"></li>
           <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/1.webp"></li>
           <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/12.webp"></li>
-          <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/15.webp"></li>
-          <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/3.webp"></li>
+          <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/23.webp"></li>
+          <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/4.webp"></li>
+          <li class="item" data-background-image="https://img.violet-evergarden.net/imghub2/10.webp"></li>
         </ul>
       </div>
     </header>
@@ -152,21 +152,21 @@ react入门语法 |
     <h1 id="react入门语法"><a class="anchor" href="#react入门语法">#</a> react 入门语法</h1>
 <h4 id="组件写法"><a class="anchor" href="#组件写法">#</a> 组件写法</h4>
 <hr />
-<p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">const</span> App = function (props) &#123;</span><br><span class="line">  <span class="attribute">return</span> &lt;h1&gt; Hello, world!&lt;/h1&gt;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const App = function (props) &#123;</span><br><span class="line">  return &lt;h1&gt; Hello, world!&lt;/h1&gt;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <h4 id="hook-usestate用法"><a class="anchor" href="#hook-usestate用法">#</a> hook : useState 用法</h4>
 <hr />
 <p>定义状态：</p>
-<p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">import</span> &#123; useState &#125; from <span class="string">&quot;react&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="attribute">const</span><span class="meta"> [index, setIndex] = useState(0);</span></span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import &#123; useState &#125; from &quot;react&quot;;</span><br><span class="line"></span><br><span class="line">const [index, setIndex] = useState(0);</span><br></pre></td></tr></table></figure></p>
 <p>需要修改时：</p>
-<p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">const</span> add = () =&gt; &#123;</span><br><span class="line">    <span class="attribute">setIndex</span>(index + <span class="number">1</span>);</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const add = () =&gt; &#123;</span><br><span class="line">    setIndex(index + 1);</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure></p>
 <h4 id="事件写法"><a class="anchor" href="#事件写法">#</a> 事件写法</h4>
 <hr />
 <p>在组件中添加事件时，要小驼峰式命名，函数要用 {} 括起来，一个根据点击次数逐渐增加自身数字的按钮示例：</p>
-<p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">const</span> Add = function () &#123;</span><br><span class="line">  <span class="attribute">const</span><span class="meta"> [index, setIndex] = useState(0);</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">  const addThis = () =&gt; &#123;</span></span><br><span class="line"><span class="meta">    setIndex(index + 1);</span></span><br><span class="line"><span class="meta">  &#125;;</span></span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">  return &lt;button onClick=&#123;addThis&#125;&gt;&#123;index&#125;&lt;/button&gt;;</span></span><br><span class="line"><span class="meta">&#125;;</span></span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const Add = function () &#123;</span><br><span class="line">  const [index, setIndex] = useState(0);</span><br><span class="line"></span><br><span class="line">  const addThis = () =&gt; &#123;</span><br><span class="line">    setIndex(index + 1);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  return &lt;button onClick=&#123;addThis&#125;&gt;&#123;index&#125;&lt;/button&gt;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
 <h4 id="props-用法"><a class="anchor" href="#props-用法">#</a> props 用法</h4>
 <hr />
 <p>将 props 作为函数组件的参数输入，并通过 prop 的属性获取值， props 不可被修改，一般通过一个新的状态复制 props 值。这是一个示例：</p>
-<p><figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// <span class="attribute">hello</span>组件</span><br><span class="line"><span class="attribute">const</span> Hello = function (props) &#123;</span><br><span class="line">  <span class="attribute">return</span> &lt;h1&gt;Hello, world!&#123;props.name&#125;&lt;/h1&gt;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// <span class="attribute">react</span>渲染</span><br><span class="line"><span class="attribute">ReactDOM</span>.createRoot(document.getElementById(<span class="string">&quot;root&quot;</span>)!).render(</span><br><span class="line">  <span class="section">&lt;React.StrictMode&gt;</span></span><br><span class="line">    &#123;</span><br><span class="line">      <span class="section">&lt;&gt;</span></span><br><span class="line">        <span class="section">&lt;Hello name=<span class="string">&quot;zhangsan&quot;</span> /&gt;</span></span><br><span class="line">      <span class="section">&lt;/&gt;</span></span><br><span class="line">    &#125;</span><br><span class="line">  <span class="section">&lt;/React.StrictMode&gt;</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// hello组件</span><br><span class="line">const Hello = function (props) &#123;</span><br><span class="line">  return &lt;h1&gt;Hello, world!&#123;props.name&#125;&lt;/h1&gt;;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">// react渲染</span><br><span class="line">ReactDOM.createRoot(document.getElementById(&quot;root&quot;)!).render(</span><br><span class="line">  &lt;React.StrictMode&gt;</span><br><span class="line">    &#123;</span><br><span class="line">      &lt;&gt;</span><br><span class="line">        &lt;Hello name=&quot;zhangsan&quot; /&gt;</span><br><span class="line">      &lt;/&gt;</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/React.StrictMode&gt;</span><br><span class="line">);</span><br></pre></td></tr></table></figure></p>
 <p>在该例子中，hello 组件会根据 <code>props.name</code>  获取到输入的 prop 值。</p>
 
   </div>
@@ -179,7 +179,7 @@ react入门语法 |
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-10-30 14:27:14" itemprop="dateModified" datetime="2023-10-30T14:27:14+08:00">2023-10-30</time>
+    <time title="修改时间：2023-11-01 20:16:45" itemprop="dateModified" datetime="2023-11-01T20:16:45+08:00">2023-11-01</time>
   </span>
 </div>
 
@@ -234,7 +234,7 @@ react入门语法 |
     <div class="item left">
       
 
-  <a href="/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;img.violet-evergarden.net&#x2F;imghub2&#x2F;5.webp" title="修复了一个在线笔记大痛点">
+  <a href="/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;img.violet-evergarden.net&#x2F;imghub2&#x2F;12.webp" title="修复了一个在线笔记大痛点">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 编程笔记</span>
   <h3>修复了一个在线笔记大痛点</h3>
@@ -365,16 +365,6 @@ react入门语法 |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%93%B2%E5%AD%A6/" title="分类于 哲学">哲学</a>
-</div>
-
-    <span><a href="/2023/03/01/%E4%BD%95%E4%B8%BA%E4%BA%BA/" title="何为人">何为人</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
@@ -395,10 +385,39 @@ react入门语法 |
   <li class="item">
     
 <div class="breadcrumb">
+</div>
+
+    <span><a href="/links/" title="友链">友链</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%BF%83%E7%90%86/" title="分类于 心理">心理</a>
+</div>
+
+    <span><a href="/2023/02/27/%E5%AF%B9%E4%BA%8E%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%8F%8A%E5%A4%96%E7%95%8C%E7%9A%84%E6%80%9D%E8%80%83/" title="对于自身以及外界的思考">对于自身以及外界的思考</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E5%93%B2%E5%AD%A6/" title="分类于 哲学">哲学</a>
+</div>
+
+    <span><a href="/2023/03/01/%E4%BD%95%E4%B8%BA%E4%BA%BA/" title="何为人">何为人</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" title="拆分组件与高内聚">拆分组件与高内聚</a></span>
+    <span><a href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" title="移动端适配中的视口">移动端适配中的视口</a></span>
   </li>
 
       
@@ -424,20 +443,10 @@ react入门语法 |
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E5%BF%83%E7%90%86/" title="分类于 心理">心理</a>
+<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2023/02/27/%E5%AF%B9%E4%BA%8E%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%8F%8A%E5%A4%96%E7%95%8C%E7%9A%84%E6%80%9D%E8%80%83/" title="对于自身以及外界的思考">对于自身以及外界的思考</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E5%93%B2%E5%AD%A6/" title="分类于 哲学">哲学</a>
-</div>
-
-    <span><a href="/2023/03/09/%E4%BA%BA%E4%B9%8B%E8%BF%BD%E6%B1%82/" title="人之追求">人之追求</a></span>
+    <span><a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" title="拆分组件与高内聚">拆分组件与高内聚</a></span>
   </li>
 
       
@@ -447,17 +456,7 @@ react入门语法 |
 <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="frp内网穿透">frp内网穿透</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
-</div>
-
-    <span><a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" title="在线笔记的开发与三层架构">在线笔记的开发与三层架构</a></span>
+    <span><a href="/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/" title="修复了一个在线笔记大痛点">修复了一个在线笔记大痛点</a></span>
   </li>
 
   </ul>
