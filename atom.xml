@@ -3,7 +3,49 @@
     <id>https://longyu2.github.io</id>
     <title>何穷</title>
     <link href="https://longyu2.github.io" />
-    <updated>2023-11-01T17:03:09.000Z</updated>
+    <updated>2023-11-08T16:00:51.000Z</updated>
+    <entry>
+        <id>https://longyu2.github.io/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</id>
+        <title>Artalk部署教程</title>
+        <link rel="alternate" href="https://longyu2.github.io/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/"/>
+        <content type="html">&lt;h1 id=&#34;artalk安装教程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#artalk安装教程&#34;&gt;#&lt;/a&gt; artalk 安装教程&lt;/h1&gt;
+&lt;p&gt;本文适合对 linux 有一定了解的同学，不适合纯小白。&lt;/p&gt;
+&lt;h4 id=&#34;第一步下载并安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一步下载并安装&#34;&gt;#&lt;/a&gt; 第一步，下载并安装&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;下载并解压安装包，复制这条命令并运行，他会从 github 下载 artalk 二进制文件并自动解压到当前目录：&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget https://github.com/ArtalkJS/Artalk/releases/download/v2.6.4/artalk_v2.6.4_linux_amd64.tar.gz  -O - | tar -xz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后，输入 ls 查看当前目录的文件，如无意外，你会看到这个文件夹：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/1.png&#34; alt=&#34;如图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;然后 cd 进入，ls 展示目录内容：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;然后输入命令：如果看到的是这样，那应该启动成功了&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nohup ./artalk server &amp;amp;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;然后在确保你的网络条件没有问题的情况下，地址栏输入 http://&amp;lt;你的域名&amp;gt;:23366，就可以访问 artalk 的管理页面：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第二步设置管理员账号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第二步设置管理员账号&#34;&gt;#&lt;/a&gt; 第二步，设置管理员账号&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;输入命令：&lt;/p&gt;
+&lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;./artalk admin&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;即可设置管理员账户和密码：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/5.png&#34; alt=&#34;&#34; /&gt;****&lt;/p&gt;
+&lt;h4 id=&#34;第三步用刚才设置的管理员账号登录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第三步用刚才设置的管理员账号登录&#34;&gt;#&lt;/a&gt; 第三步，用刚才设置的管理员账号登录&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;用刚刚设置的账号登录管理页面，按图所示新建站点：&lt;/p&gt;
+&lt;p&gt;**&lt;img data-src=&#34;https://misaka-mikoto.cn/img/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意：url 必须包含你站点的 url，如果你的网站（即前端的域名）是 http://baidu.com，那么这里的 site URLs 就需要输入 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2JhaWR1LmNvbQ==&#34;&gt;http://baidu.com&lt;/span&gt;，可输入多个 url，用逗号分隔&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;第四步配置前端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第四步配置前端&#34;&gt;#&lt;/a&gt; 第四步，配置前端&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;具体前端配置代码参考 artalk 官网，这里只作示范：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/6.png&#34; alt=&#34;&#34; /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;要注意的是：site 属性必须和刚才后端设置中的站点名称相同；server 属性必须和服务器地址相同&lt;/p&gt;
+&lt;h4 id=&#34;第五步打开网站检验是否成功&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第五步打开网站检验是否成功&#34;&gt;#&lt;/a&gt; 第五步，打开网站，检验是否成功&lt;/h4&gt;
+&lt;hr /&gt;
+&lt;p&gt;出现 artalk 的评论区，则成功：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+</content>
+        <updated>2023-11-08T16:00:51.000Z</updated>
+    </entry>
     <entry>
         <id>https://longyu2.github.io/2023/11/02/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
         <title>react入门语法（二）</title>
