@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://longyu2.github.io</id>
+    <id>https://blog.misaka-mikoto.cn</id>
     <title>何穷 • Posts by &#34;编程笔记&#34; category</title>
-    <link href="https://longyu2.github.io" />
+    <link href="https://blog.misaka-mikoto.cn" />
     <updated>2023-11-08T16:00:51.000Z</updated>
     <entry>
-        <id>https://longyu2.github.io/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/</id>
         <title>Artalk部署教程</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/"/>
         <content type="html">&lt;h1 id=&#34;artalk安装教程&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#artalk安装教程&#34;&gt;#&lt;/a&gt; artalk 安装教程&lt;/h1&gt;
 &lt;p&gt;本文适合对 linux 有一定了解的同学，不适合纯小白。&lt;/p&gt;
 &lt;h4 id=&#34;第一步下载并安装&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第一步下载并安装&#34;&gt;#&lt;/a&gt; 第一步，下载并安装&lt;/h4&gt;
@@ -15,41 +15,41 @@
 &lt;p&gt;下载并解压安装包，复制这条命令并运行，他会从 github 下载 artalk 二进制文件并自动解压到当前目录：&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;wget https://github.com/ArtalkJS/Artalk/releases/download/v2.6.4/artalk_v2.6.4_linux_amd64.tar.gz  -O - | tar -xz&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;然后，输入 ls 查看当前目录的文件，如无意外，你会看到这个文件夹：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/1.png&#34; alt=&#34;如图&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://longyu2.github.io/images/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/1.png&#34; alt=&#34;如图&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;然后 cd 进入，ls 展示目录内容：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://longyu2.github.io/images/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/2.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;然后输入命令：如果看到的是这样，那应该启动成功了&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;nohup ./artalk server &amp;amp;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://longyu2.github.io/images/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/3.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;然后在确保你的网络条件没有问题的情况下，地址栏输入 http://&amp;lt;你的域名&amp;gt;:23366，就可以访问 artalk 的管理页面：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://longyu2.github.io/images/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/4.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;h4 id=&#34;第二步设置管理员账号&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第二步设置管理员账号&#34;&gt;#&lt;/a&gt; 第二步，设置管理员账号&lt;/h4&gt;
 &lt;hr /&gt;
 &lt;p&gt;输入命令：&lt;/p&gt;
 &lt;p&gt;&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;./artalk admin&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;即可设置管理员账户和密码：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/5.png&#34; alt=&#34;&#34; /&gt;****&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://longyu2.github.io/images/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/5.png&#34; alt=&#34;&#34; /&gt;****&lt;/p&gt;
 &lt;h4 id=&#34;第三步用刚才设置的管理员账号登录&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第三步用刚才设置的管理员账号登录&#34;&gt;#&lt;/a&gt; 第三步，用刚才设置的管理员账号登录&lt;/h4&gt;
 &lt;hr /&gt;
 &lt;p&gt;用刚刚设置的账号登录管理页面，按图所示新建站点：&lt;/p&gt;
-&lt;p&gt;**&lt;img data-src=&#34;https://misaka-mikoto.cn/img/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;**&lt;img data-src=&#34;https://longyu2.github.io/images/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/8.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;注意：url 必须包含你站点的 url，如果你的网站（即前端的域名）是 http://baidu.com，那么这里的 site URLs 就需要输入 &lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2JhaWR1LmNvbQ==&#34;&gt;http://baidu.com&lt;/span&gt;，可输入多个 url，用逗号分隔&lt;/strong&gt;&lt;/p&gt;
 &lt;h4 id=&#34;第四步配置前端&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第四步配置前端&#34;&gt;#&lt;/a&gt; 第四步，配置前端&lt;/h4&gt;
 &lt;hr /&gt;
 &lt;p&gt;具体前端配置代码参考 artalk 官网，这里只作示范：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/6.png&#34; alt=&#34;&#34; /&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img data-src=&#34;https://longyu2.github.io/images/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/6.png&#34; alt=&#34;&#34; /&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;要注意的是：site 属性必须和刚才后端设置中的站点名称相同；server 属性必须和服务器地址相同&lt;/p&gt;
 &lt;h4 id=&#34;第五步打开网站检验是否成功&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#第五步打开网站检验是否成功&#34;&gt;#&lt;/a&gt; 第五步，打开网站，检验是否成功&lt;/h4&gt;
 &lt;hr /&gt;
 &lt;p&gt;出现 artalk 的评论区，则成功：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&#34;https://misaka-mikoto.cn/img/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&#34;https://longyu2.github.io/images/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/9.png&#34; alt=&#34;&#34; /&gt;&lt;/p&gt;
 </content>
         <updated>2023-11-08T16:00:51.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2023/11/02/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/11/02/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/</id>
         <title>react入门语法（二）</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/11/02/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/11/02/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/"/>
         <content type="html">&lt;h4 id=&#34;列表渲染&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#列表渲染&#34;&gt;#&lt;/a&gt; 列表渲染&lt;/h4&gt;
 &lt;hr /&gt;
 &lt;p&gt;使用 map 将集群生成一个 JSX 节点：&lt;/p&gt;
@@ -67,9 +67,9 @@
         <updated>2023-11-01T17:03:09.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2023/10/30/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/10/30/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/</id>
         <title>react入门语法</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/10/30/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/10/30/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/"/>
         <content type="html">&lt;h1 id=&#34;react入门语法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#react入门语法&#34;&gt;#&lt;/a&gt; react 入门语法&lt;/h1&gt;
 &lt;h4 id=&#34;组件写法&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#组件写法&#34;&gt;#&lt;/a&gt; 组件写法&lt;/h4&gt;
 &lt;hr /&gt;
@@ -93,9 +93,9 @@
         <updated>2023-10-30T06:25:50.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/</id>
         <title>修复了一个在线笔记大痛点</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/"/>
         <content type="html">&lt;h4 id=&#34;起因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#起因&#34;&gt;#&lt;/a&gt; 起因&lt;/h4&gt;
 &lt;p&gt;由于文章的编辑是使用  &lt;code&gt;title&lt;/code&gt;  和  &lt;code&gt;content&lt;/code&gt;  两个响应式变量双向绑定着编辑区的输入框&lt;/p&gt;
 &lt;p&gt;变量：&lt;/p&gt;
@@ -120,9 +120,9 @@
         <updated>2023-10-28T12:34:30.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2023/10/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%8A%E9%99%90/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/10/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%8A%E9%99%90/</id>
         <title>编程的上限</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/10/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%8A%E9%99%90/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/10/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%8A%E9%99%90/"/>
         <content type="html">&lt;h4 id=&#34;应用开发的上限&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#应用开发的上限&#34;&gt;#&lt;/a&gt; 应用开发的上限&lt;/h4&gt;
 &lt;p&gt;与一些人的交谈中，我能感觉到他们的基础薄弱，特别是在计算机网络这块，于是我想明白了一件事情：应用开发的上限很低。使用的都是别人现成开发好的工具，当业务开发到极限，你所能做的事情也就没有什么了，重要的是，长年累月可能只是熟悉了框架的使用，未有将自己编程能力突破的机会。&lt;/p&gt;
 &lt;h4 id=&#34;编程能力究竟是如何提高的&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#编程能力究竟是如何提高的&#34;&gt;#&lt;/a&gt; 编程能力究竟是如何提高的&lt;/h4&gt;
@@ -133,9 +133,9 @@
         <updated>2023-10-18T10:26:14.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/</id>
         <title>网络流程</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/"/>
         <content type="html">&lt;h3 id=&#34;前提&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#前提&#34;&gt;#&lt;/a&gt; 前提&lt;/h3&gt;
 &lt;p&gt;本文为了简明地向你解释&lt;br /&gt;
 本文假设你已经有简单的 html 和 css 知识和一些网络的常识&lt;br /&gt;
@@ -159,9 +159,9 @@
         <updated>2023-04-06T15:24:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</id>
         <title>frp内网穿透</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/"/>
         <content type="html">&lt;h3 id=&#34;内网穿透&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#内网穿透&#34;&gt;#&lt;/a&gt; 内网穿透&lt;/h3&gt;
 &lt;hr /&gt;
 &lt;p&gt;众所周知，由于 NAT 技术，用户被分割成了一个个的局域网，开放的 web 已经不复存在。由于 IPv4 地址的短缺，加上 IPv6 全面普及的遥遥无期，内网穿透有了极大的必要。&lt;/p&gt;
@@ -184,9 +184,9 @@
         <updated>2023-02-24T23:23:29.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/</id>
         <title>拆分组件与高内聚</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/"/>
         <content type="html">&lt;h3 id=&#34;一千五百行的组件&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#一千五百行的组件&#34;&gt;#&lt;/a&gt; 一千五百行的组件&lt;/h3&gt;
 &lt;hr /&gt;
 &lt;p&gt;在很长的一段时间内，我仍然在 SPA 开发时没有去拆分组件，而是将所有的逻辑代码写在了同一个组件之中。因为这些 UI 和代码没有复用的需要，写在一个组件中还省去了组件通信的麻烦。所有的变量都近乎是全局变量，写起来不要太简单。但很快，我就吃到了苦果。变量和函数越来越多，命名越来越长，超过一千五百行的组件代码，让我在来回的滚动，即使是一直用 Ctrl+F，查找代码块的位置都花了不少时间。&lt;/p&gt;
@@ -211,9 +211,9 @@
         <updated>2023-02-23T19:41:57.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/</id>
         <title>在线笔记的开发与三层架构</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/"/>
         <content type="html">&lt;h3 id=&#34;起源&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#起源&#34;&gt;#&lt;/a&gt; 起源&lt;/h3&gt;
 &lt;hr /&gt;
 &lt;p&gt;再次在在线笔记的架构选择中使用了三层架构，之前还是在三年多前学习 ASP.NET 的时候使用过，后来并未怎么写过代码，于是已经忘却。&lt;/p&gt;
@@ -235,9 +235,9 @@
         <updated>2023-02-17T22:49:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/</id>
+        <id>https://blog.misaka-mikoto.cn/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/</id>
         <title>移动端适配中的视口</title>
-        <link rel="alternate" href="https://longyu2.github.io/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/"/>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/"/>
         <content type="html">&lt;h5 id=&#34;2023111434&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2023111434&#34;&gt;#&lt;/a&gt; 2023/1/11		4:34&lt;/h5&gt;
 &lt;h4 id=&#34;视口是什么&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#视口是什么&#34;&gt;#&lt;/a&gt; 视口是什么&lt;/h4&gt;
 &lt;hr /&gt;
@@ -268,9 +268,9 @@
         <updated>2023-01-10T20:34:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://longyu2.github.io/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</id>
-        <title>编程笔记</title>
-        <link rel="alternate" href="https://longyu2.github.io/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
+        <id>https://blog.misaka-mikoto.cn/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BB%8A%E6%97%A5%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/</id>
+        <title>今日编程笔记</title>
+        <link rel="alternate" href="https://blog.misaka-mikoto.cn/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BB%8A%E6%97%A5%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/"/>
         <content type="html">&lt;h3 id=&#34;1今日之收获&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#1今日之收获&#34;&gt;#&lt;/a&gt; 1. 今日之收获&lt;/h3&gt;
 &lt;p&gt;今天的主要收获是，在帮助石磊的时候，重新审视了 node 在线聊天的许多漏洞，并加以完善，而且，在功能的拓展中，我充分的体会到了我当初使用状态码来进行接口消息的区分是多么正确的决定。使用三位数状态码来标记接口传输的 json 数据的功能，使我在扩展接口时非常顺利，没有任何的困难。这就是之前充分设计的好处，我终于体会到了代码需要良好的可扩展性，在写代码时，不仅仅要注重业务逻辑，更重要的是注重代码的健壮和可扩展性。之前忘了在哪看到，程序员老手写的代码只有 2 成是用在业务逻辑，剩下 8 成，是在保证代码的健壮，可复用性，安全。如今我终于深刻的体会到了，这是在书本上学不来的东西，只有在实际开发之中才能明白。&lt;/p&gt;
 &lt;h3 id=&#34;2达到现实的原因&#34;&gt;&lt;a class=&#34;anchor&#34; href=&#34;#2达到现实的原因&#34;&gt;#&lt;/a&gt; 2. 达到现实的原因&lt;/h3&gt;
