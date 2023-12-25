@@ -25,12 +25,12 @@
 
   
 
-<link rel="canonical" href="https://blog.misaka-mikoto.cn/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+<link rel="canonical" href="https://blog.misaka-mikoto.cn/2023/12/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E8%B4%AA%E5%90%83%E8%9B%87%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/">
 
 
 
   <title>
-frp内网穿透 - 编程笔记 |
+修复贪吃蛇一个小bug - 编程笔记 |
 何穷 = 何穷 = 世事无极，谁可穷之？</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -58,16 +58,16 @@ frp内网穿透 - 编程笔记 |
         <div id="brand">
           <div class="pjax">
           
-  <h1 itemprop="name headline">frp内网穿透
+  <h1 itemprop="name headline">修复贪吃蛇一个小bug
   </h1>
   
 <div class="meta">
-  <span class="item" title="创建时间：2023-02-25 07:23:29">
+  <span class="item" title="创建时间：2023-12-25 22:45:59">
     <span class="icon">
       <i class="ic i-calendar"></i>
     </span>
     <span class="text">发表于</span>
-    <time itemprop="dateCreated datePublished" datetime="2023-02-25T07:23:29+08:00">2023-02-25</time>
+    <time itemprop="dateCreated datePublished" datetime="2023-12-25T22:45:59+08:00">2023-12-25</time>
   </span>
 </div>
 
@@ -100,12 +100,12 @@ frp内网穿透 - 编程笔记 |
       </div>
       <div id="imgs" class="pjax">
         <ul>
-          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/30.webp"></li>
+          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/15.webp"></li>
+          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/9.webp"></li>
+          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/29.webp"></li>
+          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/14.webp"></li>
+          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/6.webp"></li>
           <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/3.webp"></li>
-          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/18.webp"></li>
-          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/27.webp"></li>
-          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/1.webp"></li>
-          <li class="item" data-background-image="https://misaka-mikoto.cn/img/imghub2/4.webp"></li>
         </ul>
       </div>
     </header>
@@ -136,7 +136,7 @@ frp内网穿透 - 编程笔记 |
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
-  <link itemprop="mainEntityOfPage" href="https://blog.misaka-mikoto.cn/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">
+  <link itemprop="mainEntityOfPage" href="https://blog.misaka-mikoto.cn/2023/12/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E8%B4%AA%E5%90%83%E8%9B%87%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -151,24 +151,14 @@ frp内网穿透 - 编程笔记 |
   <div class="body md" itemprop="articleBody">
     
 
-    <h3 id="内网穿透"><a class="anchor" href="#内网穿透">#</a> 内网穿透</h3>
-<hr />
-<p>众所周知，由于 NAT 技术，用户被分割成了一个个的局域网，开放的 web 已经不复存在。由于 IPv4 地址的短缺，加上 IPv6 全面普及的遥遥无期，内网穿透有了极大的必要。</p>
-<h3 id="frp"><a class="anchor" href="#frp">#</a> frp</h3>
-<hr />
-<p>内网穿透技术有很多，我选择了比较主流的 frp。一般来说，内网穿透都需要一台具有公网 IP 的服务器，当然也有端到端的穿透，但是这种打洞技术需要在两个客户端之间都安装穿透软件，无法直接使用 Web，暂时不使用。以后需要在两个设备之间传输大文件时再使用这种。</p>
-<h3 id="使用frp-将本地网站映射到公网"><a class="anchor" href="#使用frp-将本地网站映射到公网">#</a> 使用 frp 将本地网站映射到公网</h3>
-<hr />
-<p>操作步骤：</p>
-<ol>
-<li>下载对应的 frp 包，并解压</li>
-<li>将 frps 程序 和 frps.ini 配置文件放至服务器对应目录，将 frpc 程序 和 frpc.ini 配置文件放至服务器对应目录。</li>
-<li>修改 frps.ini，设置与客户端通信的端口，以及暴露给外界的 http 端口，并启动 <code>./frps -c frps.ini命令</code> 。<br />
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">bind_port = 7000</span><br><span class="line">vhost_http_port = 8080</span><br></pre></td></tr></table></figure></li>
-<li>修改 frpc.ini，设置与服务器通信的端口和本地 web 服务器的端口，并启动 <code>./frpc -c frpc.ini命令</code> 。<br />
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[common]</span><br><span class="line">server_addr = x.x.x.x</span><br><span class="line">server_port = 7000</span><br><span class="line"></span><br><span class="line">[web]</span><br><span class="line">type = http</span><br><span class="line">local_port = 80</span><br><span class="line">custom_domains = www.yourdomain.com</span><br><span class="line"></span><br><span class="line">[web2]</span><br><span class="line">type = http</span><br><span class="line">local_port = 8080</span><br><span class="line">custom_domains = www.yourdomain2.com</span><br></pre></td></tr></table></figure></li>
-<li>使用浏览器访问设置的域名，则可访问到内网网站。</li>
-</ol>
+    <p>两年前写了一个贪吃蛇，算是十分简陋了。它有一个小漏洞，就是初始化时有一定的几率卡死，必须退出浏览器重进，我之前发现了这个问题，不过并未深究。</p>
+<p>时至今日，我的编程能力突飞猛进之后，再保留这个 bug 就说不过去了。于是我开始定位 bug，很快就找到了无限循环的位置：</p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while(randSnakeHeadi - foodi &lt; 5 &amp;&amp; randSnakeHeadj - foodj &lt; 5)&#123;</span><br><span class="line">    randSnakeHeadi = Math.floor(Math.random()*15)</span><br><span class="line">    randSnakeHeadj = Math.floor(Math.random()*15)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里， <code>randSnakeHeadi</code>  和  <code>randSnakeHeadj</code>  这两个变量用来表示新生成的贪吃蛇头的坐标， <code>foodi</code>  和  <code>foodj</code>  表示的是食物坐标。判断当蛇头和食物的距离过近就重新生成贪吃蛇头的坐标，但我却犯了一个致命的错误，计算坐标的距离直接使用了减法，这样，当减号左边的量小于右边，就会得到负数！这是个不可原谅的错误。它会导致无限循环，食物坐标接近地图的边角，也就是数值最大（使用数组下标就是快接近数组长度），这个循环就没有结束条件了，只要生成的贪吃蛇坐标和食物的坐标距离在 5 以内，就会重新循环，一旦食物的坐标大于地图宽度 - 5，那么 <code>randSnakeHeadi - foodi </code> 便永远小于 5 , 无限循环。</p>
+<p>解决办法也十分简单，计算距离的时候加上绝对值：</p>
+<p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">while(Math.abs(randSnakeHeadi - foodi) &lt; 5 &amp;&amp; Math.abs( randSnakeHeadj - foodj )&lt; 5)&#123;</span><br><span class="line">            randSnakeHeadi = Math.floor(Math.random()*15)</span><br><span class="line">            randSnakeHeadj = Math.floor(Math.random()*15)</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure></p>
+<p>github 地址：<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2xvbmd5dTIvbGl0dGxlR2FtZXMv">js 小游戏</span></p>
+<p>仅以此怀念那个在计算机之路上艰难求索的无知少年。</p>
 
   </div>
 
@@ -180,7 +170,7 @@ frp内网穿透 - 编程笔记 |
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">更新于</span>
-    <time title="修改时间：2023-10-12 15:44:30" itemprop="dateModified" datetime="2023-10-12T15:44:30+08:00">2023-10-12</time>
+    <time title="修改时间：2023-12-25 22:46:56" itemprop="dateModified" datetime="2023-12-25T22:46:56+08:00">2023-12-25</time>
   </span>
 </div>
 
@@ -216,7 +206,7 @@ frp内网穿透 - 编程笔记 |
   </li>
   <li class="link">
     <strong>本文链接：</strong>
-    <a href="https://blog.misaka-mikoto.cn/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="frp内网穿透">https://blog.misaka-mikoto.cn/2023/02/25/编程笔记/frp内网穿透/</a>
+    <a href="https://blog.misaka-mikoto.cn/2023/12/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E8%B4%AA%E5%90%83%E8%9B%87%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/" title="修复贪吃蛇一个小bug">https://blog.misaka-mikoto.cn/2023/12/25/编程笔记/修复贪吃蛇一个小bug/</a>
   </li>
   <li class="license">
     <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
@@ -235,22 +225,14 @@ frp内网穿透 - 编程笔记 |
     <div class="item left">
       
 
-  <a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;misaka-mikoto.cn&#x2F;img&#x2F;imghub2&#x2F;5.webp" title="拆分组件与高内聚">
+  <a href="/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;misaka-mikoto.cn&#x2F;img&#x2F;imghub2&#x2F;30.webp" title="Artalk部署教程">
   <span class="type">上一篇</span>
   <span class="category"><i class="ic i-flag"></i> 编程笔记</span>
-  <h3>拆分组件与高内聚</h3>
+  <h3>Artalk部署教程</h3>
   </a>
 
     </div>
     <div class="item right">
-      
-
-  <a href="/2023/02/27/%E5%AF%B9%E4%BA%8E%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%8F%8A%E5%A4%96%E7%95%8C%E7%9A%84%E6%80%9D%E8%80%83/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;misaka-mikoto.cn&#x2F;img&#x2F;imghub2&#x2F;13.webp" title="对于自身以及外界的思考">
-  <span class="type">下一篇</span>
-  <span class="category"><i class="ic i-flag"></i> 心理</span>
-  <h3>对于自身以及外界的思考</h3>
-  </a>
-
     </div>
 </div>
 
@@ -267,11 +249,10 @@ frp内网穿透 - 编程笔记 |
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="文章目录">
-          <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F"><span class="toc-number">1.</span> <span class="toc-text"> 内网穿透</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#frp"><span class="toc-number">2.</span> <span class="toc-text"> frp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8frp-%E5%B0%86%E6%9C%AC%E5%9C%B0%E7%BD%91%E7%AB%99%E6%98%A0%E5%B0%84%E5%88%B0%E5%85%AC%E7%BD%91"><span class="toc-number">3.</span> <span class="toc-text"> 使用 frp 将本地网站映射到公网</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="系列文章">
         <ul>
-          <li><a href="/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BB%8A%E6%97%A5%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" rel="bookmark" title="今日编程笔记">今日编程笔记</a></li><li><a href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" rel="bookmark" title="移动端适配中的视口">移动端适配中的视口</a></li><li><a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" rel="bookmark" title="在线笔记的开发与三层架构">在线笔记的开发与三层架构</a></li><li><a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" rel="bookmark" title="拆分组件与高内聚">拆分组件与高内聚</a></li><li class="active"><a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="bookmark" title="frp内网穿透">frp内网穿透</a></li><li><a href="/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/" rel="bookmark" title="网络流程">网络流程</a></li><li><a href="/2023/10/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%8A%E9%99%90/" rel="bookmark" title="编程的上限">编程的上限</a></li><li><a href="/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/" rel="bookmark" title="修复了一个在线笔记大痛点">修复了一个在线笔记大痛点</a></li><li><a href="/2023/10/30/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/" rel="bookmark" title="react入门语法">react入门语法</a></li><li><a href="/2023/11/02/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="bookmark" title="react入门语法（二）">react入门语法（二）</a></li><li><a href="/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/" rel="bookmark" title="Artalk部署教程">Artalk部署教程</a></li><li><a href="/2023/12/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E8%B4%AA%E5%90%83%E8%9B%87%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/" rel="bookmark" title="修复贪吃蛇一个小bug">修复贪吃蛇一个小bug</a></li>
+          <li><a href="/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BB%8A%E6%97%A5%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" rel="bookmark" title="今日编程笔记">今日编程笔记</a></li><li><a href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" rel="bookmark" title="移动端适配中的视口">移动端适配中的视口</a></li><li><a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" rel="bookmark" title="在线笔记的开发与三层架构">在线笔记的开发与三层架构</a></li><li><a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" rel="bookmark" title="拆分组件与高内聚">拆分组件与高内聚</a></li><li><a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="bookmark" title="frp内网穿透">frp内网穿透</a></li><li><a href="/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/" rel="bookmark" title="网络流程">网络流程</a></li><li><a href="/2023/10/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%8A%E9%99%90/" rel="bookmark" title="编程的上限">编程的上限</a></li><li><a href="/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/" rel="bookmark" title="修复了一个在线笔记大痛点">修复了一个在线笔记大痛点</a></li><li><a href="/2023/10/30/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/" rel="bookmark" title="react入门语法">react入门语法</a></li><li><a href="/2023/11/02/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/" rel="bookmark" title="react入门语法（二）">react入门语法（二）</a></li><li><a href="/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/" rel="bookmark" title="Artalk部署教程">Artalk部署教程</a></li><li class="active"><a href="/2023/12/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E8%B4%AA%E5%90%83%E8%9B%87%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/" rel="bookmark" title="修复贪吃蛇一个小bug">修复贪吃蛇一个小bug</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="站点概览">
@@ -352,12 +333,10 @@ frp内网穿透 - 编程笔记 |
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2023/02/24/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E6%8B%86%E5%88%86%E7%BB%84%E4%BB%B6%E4%B8%8E%E9%AB%98%E5%86%85%E8%81%9A/" rel="prev" title="上一篇"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2023/02/27/%E5%AF%B9%E4%BA%8E%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%8F%8A%E5%A4%96%E7%95%8C%E7%9A%84%E6%80%9D%E8%80%83/" rel="next" title="下一篇"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -382,46 +361,6 @@ frp内网穿透 - 编程笔记 |
 <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/" title="网络流程">网络流程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
-</div>
-
-    <span><a href="/2023/11/02/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/" title="react入门语法（二）">react入门语法（二）</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
-</div>
-
-    <span><a href="/2023/10/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BC%96%E7%A8%8B%E7%9A%84%E4%B8%8A%E9%99%90/" title="编程的上限">编程的上限</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
-</div>
-
-    <span><a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="frp内网穿透">frp内网穿透</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
-</div>
-
     <span><a href="/2023/12/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E8%B4%AA%E5%90%83%E8%9B%87%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/" title="修复贪吃蛇一个小bug">修复贪吃蛇一个小bug</a></span>
   </li>
 
@@ -432,27 +371,27 @@ frp内网穿透 - 编程笔记 |
 <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2023/02/18/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%B8%89%E5%B1%82%E6%9E%B6%E6%9E%84/" title="在线笔记的开发与三层架构">在线笔记的开发与三层架构</a></span>
+    <span><a href="/2023/10/28/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E4%BA%86%E4%B8%80%E4%B8%AA%E5%9C%A8%E7%BA%BF%E7%AC%94%E8%AE%B0%E5%A4%A7%E7%97%9B%E7%82%B9/" title="修复了一个在线笔记大痛点">修复了一个在线笔记大痛点</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
+<a href="/categories/%E5%BF%83%E7%90%86/" title="分类于 心理">心理</a>
 </div>
 
-    <span><a href="/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/" title="Artalk部署教程">Artalk部署教程</a></span>
+    <span><a href="/2023/02/27/%E5%AF%B9%E4%BA%8E%E8%87%AA%E8%BA%AB%E4%BB%A5%E5%8F%8A%E5%A4%96%E7%95%8C%E7%9A%84%E6%80%9D%E8%80%83/" title="对于自身以及外界的思考">对于自身以及外界的思考</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
+<a href="/categories/%E5%93%B2%E5%AD%A6/" title="分类于 哲学">哲学</a>
 </div>
 
-    <span><a href="/2023/01/11/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E9%80%82%E9%85%8D%E4%B8%AD%E7%9A%84%E8%A7%86%E5%8F%A3/" title="移动端适配中的视口">移动端适配中的视口</a></span>
+    <span><a href="/2023/03/09/%E4%BA%BA%E4%B9%8B%E8%BF%BD%E6%B1%82/" title="人之追求">人之追求</a></span>
   </li>
 
       
@@ -472,7 +411,47 @@ frp内网穿透 - 编程笔记 |
 <a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
 </div>
 
-    <span><a href="/2023/10/30/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95/" title="react入门语法">react入门语法</a></span>
+    <span><a href="/2023/02/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="frp内网穿透">frp内网穿透</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
+</div>
+
+    <span><a href="/2022/10/29/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BB%8A%E6%97%A5%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="今日编程笔记">今日编程笔记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
+</div>
+
+    <span><a href="/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/" title="Artalk部署教程">Artalk部署教程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
+</div>
+
+    <span><a href="/2023/04/06/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E7%BD%91%E7%BB%9C%E6%B5%81%E7%A8%8B/" title="网络流程">网络流程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/" title="分类于 编程笔记">编程笔记</a>
+</div>
+
+    <span><a href="/2023/11/02/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/react%E5%85%A5%E9%97%A8%E8%AF%AD%E6%B3%95%EF%BC%88%E4%BA%8C%EF%BC%89/" title="react入门语法（二）">react入门语法（二）</a></span>
   </li>
 
   </ul>
@@ -503,7 +482,7 @@ frp内网穿透 - 编程笔记 |
   </div>
 <script data-config type="text/javascript">
   var LOCAL = {
-    path: '2023/02/25/编程笔记/frp内网穿透/',
+    path: '2023/12/25/编程笔记/修复贪吃蛇一个小bug/',
     favicon: {
       show: "（●´3｀●）やれやれだぜ",
       hide: "(´Д｀)大変だ！"

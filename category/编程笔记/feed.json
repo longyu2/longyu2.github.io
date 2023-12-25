@@ -5,6 +5,14 @@
     "home_page_url": "https://blog.misaka-mikoto.cn",
     "items": [
         {
+            "id": "https://blog.misaka-mikoto.cn/2023/12/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E8%B4%AA%E5%90%83%E8%9B%87%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/",
+            "url": "https://blog.misaka-mikoto.cn/2023/12/25/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/%E4%BF%AE%E5%A4%8D%E8%B4%AA%E5%90%83%E8%9B%87%E4%B8%80%E4%B8%AA%E5%B0%8Fbug/",
+            "title": "修复贪吃蛇一个小bug",
+            "date_published": "2023-12-25T14:45:59.000Z",
+            "content_html": "<p>两年前写了一个贪吃蛇，算是十分简陋了。它有一个小漏洞，就是初始化时有一定的几率卡死，必须退出浏览器重进，我之前发现了这个问题，不过并未深究。</p>\n<p>时至今日，我的编程能力突飞猛进之后，再保留这个 bug 就说不过去了。于是我开始定位 bug，很快就找到了无限循环的位置：</p>\n<p><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">while(randSnakeHeadi - foodi &lt; 5 &amp;&amp; randSnakeHeadj - foodj &lt; 5)&#123;</span><br><span class=\"line\">    randSnakeHeadi = Math.floor(Math.random()*15)</span><br><span class=\"line\">    randSnakeHeadj = Math.floor(Math.random()*15)</span><br><span class=\"line\">&#125;</span><br></pre></td></tr></table></figure></p>\n<p>这里， <code>randSnakeHeadi</code>  和  <code>randSnakeHeadj</code>  这两个变量用来表示新生成的贪吃蛇头的坐标， <code>foodi</code>  和  <code>foodj</code>  表示的是食物坐标。判断当蛇头和食物的距离过近就重新生成贪吃蛇头的坐标，但我却犯了一个致命的错误，计算坐标的距离直接使用了减法，这样，当减号左边的量小于右边，就会得到负数！这是个不可原谅的错误。它会导致无限循环，食物坐标接近地图的边角，也就是数值最大（使用数组下标就是快接近数组长度），这个循环就没有结束条件了，只要生成的贪吃蛇坐标和食物的坐标距离在 5 以内，就会重新循环，一旦食物的坐标大于地图宽度 - 5，那么 <code>randSnakeHeadi - foodi </code> 便永远小于 5 , 无限循环。</p>\n<p>解决办法也十分简单，计算距离的时候加上绝对值：</p>\n<p><figure class=\"highlight plaintext\"><table><tr><td class=\"gutter\"><pre><span class=\"line\">1</span><br><span class=\"line\">2</span><br><span class=\"line\">3</span><br><span class=\"line\">4</span><br></pre></td><td class=\"code\"><pre><span class=\"line\">while(Math.abs(randSnakeHeadi - foodi) &lt; 5 &amp;&amp; Math.abs( randSnakeHeadj - foodj )&lt; 5)&#123;</span><br><span class=\"line\">            randSnakeHeadi = Math.floor(Math.random()*15)</span><br><span class=\"line\">            randSnakeHeadj = Math.floor(Math.random()*15)</span><br><span class=\"line\">        &#125;</span><br></pre></td></tr></table></figure></p>\n<p>github 地址：<span class=\"exturl\" data-url=\"aHR0cHM6Ly9naXRodWIuY29tL2xvbmd5dTIvbGl0dGxlR2FtZXMv\">js 小游戏</span></p>\n<p>仅以此怀念那个在计算机之路上艰难求索的无知少年。</p>\n",
+            "tags": []
+        },
+        {
             "id": "https://blog.misaka-mikoto.cn/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/",
             "url": "https://blog.misaka-mikoto.cn/2023/11/09/%E7%BC%96%E7%A8%8B%E7%AC%94%E8%AE%B0/Artalk%E9%83%A8%E7%BD%B2%E6%95%99%E7%A8%8B/",
             "title": "Artalk部署教程",
